@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         node: true,
     },
-    extends: ["standard-with-typescript", "plugin:react/recommended"],
+    extends: ["standard-with-typescript", "eslint:recommended", "plugin:react/recommended"],
     overrides: [
         {
             env: {
@@ -22,9 +22,17 @@ module.exports = {
     },
     plugins: ["react"],
     rules: {
-        "@typescript-eslint/quotes": ["error", "double"],
+        "@typescript-eslint/quotes": ["warn", "double"],
         "@typescript-eslint/indent": "off",
-        "no-tabs": 0,
-        "@typescript-eslint/comma-dangle": ["warning", "always-multiline"],
+        "no-tabs": "off",
+        "@typescript-eslint/comma-dangle": ["warn", "always-multiline"],
+        "@typescript-eslint/semi": ["warn", "always"],
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+    },
+    settings: {
+        react: {
+            version: "detect",
+        },
     },
 };
