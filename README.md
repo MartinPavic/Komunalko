@@ -1,12 +1,12 @@
 ## Setup husky
 
-`husky install`
+`npx husky install`
 
 ## How to commit with commitizen
 
 https://commitizen-tools.github.io/commitizen/
 
-With Command line:
+With commandline:
 
 `npx cz`
 
